@@ -72,7 +72,7 @@
        intro              = $('#intro'),
        homeTrigger        = $('#home-trigger'),
        aboutTrigger       = $('#about-trigger'),
-       worksTrigger       = $('#works-trigger'),
+       worksTrigger       = $('.works-trigger'),
        contactTrigger     = $('#contact-trigger'),
        aboutSection       = $('#about'),
        worksSection       = $('#works'),
