@@ -184,7 +184,7 @@
 
             <p class="headline__description">我們提供三大類型的精彩課程：快老大學幫助您優雅面對人生下一階段、感情課程協助您經營美好關係、歌唱班讓您探索音樂的魅力。</p>
             <div class="headline__btnholder">
-              <a href="#" class="button button-solid-light works-trigger">
+              <a href="#" class="button button-solid-light" id="home-intro">
                 <span class="button-caption">課程介紹</span>
               </a>
             </div>
@@ -368,11 +368,12 @@
                   <div class="faq">
                     <h3>課前問答</h3>
                     <div class="question">
-                      <h5>Q: 課程需要什麼前提知識？</h5>
+                      <h4>Q: 課程需要什麼前提知識？</h4>
                       <p>A: 本課程不需要任何特定的前提知識。</p>
                     </div>
+                    <br>
                     <div class="question">
-                      <h5>Q: 課程的時間是固定的嗎？</h5>
+                      <h4>Q: 課程的時間是固定的嗎？</h4>
                       <p>A: 是的，課程的時間是固定的，請查看課程表。</p>
                     </div>
                     <!-- Add more FAQs as needed -->
@@ -481,21 +482,27 @@
             <div class="container-fluid px-4">
               <div class="row gx-5">
                 <div class="col-4">
-                  <div class="product">
-                    <img src="https://via.placeholder.com/300x200" alt="Product 1">
+                  <div class="product p-4">
+                    <img src="https://via.placeholder.com/300x200" alt="Product 1" class="mb-3">
                     <h3>供品套組：食品、香、祈福文創</h3>
+                    <p class="price">NT$ 1,200</p>
+                    <button class="button button-solid-light">加入購物車</button>
                   </div>
                 </div>
                 <div class="col-4">
-                  <div class="product">
-                    <img src="https://via.placeholder.com/300x200" alt="Product 2">
+                  <div class="product p-4">
+                    <img src="https://via.placeholder.com/300x200" alt="Product 2" class="mb-3">
                     <h3>會員禮包</h3>
+                    <p class="price">NT$ 800</p>
+                    <button class="button button-solid-light">加入購物車</button>
                   </div>
                 </div>
                 <div class="col-4">
-                  <div class="product">
-                    <img src="https://via.placeholder.com/300x200" alt="Product 3">
+                  <div class="product p-4">
+                    <img src="https://via.placeholder.com/300x200" alt="Product 3" class="mb-3">
                     <h3>產品單售、優惠組合包</h3>
+                    <p class="price">NT$ 500</p>
+                    <button class="button button-solid-light">加入購物車</button>
                   </div>
                 </div>
               </div>
@@ -538,12 +545,12 @@
               <div class="container-fluid p-0">
                 <!-- team member item -->
                 <div class="row g-0">
-                  <div class="col-6 col-md-3">
+                  <div class="col-6">
                     <div class="feature__image"
                       style="background-image: url('img/hcd.jpeg'); background-position: bottom center; background-size: cover;">
                     </div>
                   </div>
-                  <div class="col-6 col-md-3 bg-medium">
+                  <div class="col-6 bg-medium">
                     <div class="feature__descr">
                       <h3>許常德</h3>
                       <p>許常德，台灣流行歌曲作詞人，出生於高雄市岡山區。於世界新聞專科學校編輯採訪科畢業。參與作詞的歌曲包括范曉萱《健康歌》、許茹芸《如果雲知道》等歌曲。</p>
@@ -866,6 +873,26 @@
   <script src="js/maps/map-color-3.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNMDtmEsvSevM4ztfsbhLfLNZhKHCvWXk"></script>
   <!-- Load Scripts End -->
+
+  <script>
+  $(document).ready(function() {
+    // Add overflow-hidden class to body when trigger buttons are clicked
+    $('#about-trigger, #works-trigger, #contact-trigger').click(function() {
+      $('body').addClass('overflow-hidden');
+    });
+
+    // Remove overflow-hidden class from body when close buttons are clicked
+    $('#about-close, #works-close, #contact-close').click(function() {
+      $('body').removeClass('overflow-hidden');
+    });
+
+    $('#home-intro').click(function() {
+      $('html, body').animate({
+        scrollTop: $('.index-section').offset().top
+      }, 300);
+    });
+  });
+  </script>
 
 </body>
 
